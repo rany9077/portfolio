@@ -1,58 +1,147 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="no-js">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio</title>
+    <!-- <link rel="stylesheet" href="./css/normalize.css" /> -->
     <link rel="stylesheet" href="./css/main.css" />
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/bar.js"></script>
   </head>
   <body>
-    <div id="wrap"></div>
-    <header id="header" class="h100"></header>
-    <!-- //#header -->
-    <div id="main_visual h100"></div>
-    <!-- //#main_visual -->
-    <div id="content_wrap">
-      <div class="content-1 h100">
-        <div class="aboutMe"></div>
-        <div class="mySkills bar-graph">
-          <div class="animation">
-            <h2 class="title">HTML & CSS</h2>
-            <div class="progress-bar">
-              <div class="bar"></div>
-              <div class="rate" data-rate="85"></div>
-            </div>
-            <h2 class="title">SCSS</h2>
-            <div class="progress-bar">
-              <div class="bar"></div>
-              <div class="rate" data-rate="65"></div>
-            </div>
-            <h2 class="title">JAVA SCRIPT</h2>
-            <div class="progress-bar">
-              <div class="bar"></div>
-              <div class="rate" data-rate="50"></div>
-            </div>
-            <h2 class="title">JQUERY</h2>
-            <div class="progress-bar">
-              <div class="bar"></div>
-              <div class="rate" data-rate="50"></div>
-            </div>
-            <h2 class="title">REACT</h2>
-            <div class="progress-bar">
-              <div class="bar"></div>
-              <div class="rate" data-rate="50"></div>
-            </div>
-            <h2 class="title">ILLUSTRATOR & PHOTOSHOP</h2>
-            <div class="progress-bar">
-              <div class="bar"></div>
-              <div class="rate" data-rate="85"></div>
+    <div id="wrap">
+      <header id="header inner">
+        <nav>
+          <h1 class="logo">
+            <a href="https://rany9077.github.io/portfolio/"><img src="./img/logo.png" alt="로고" width="50" /></a>
+          </h1>
+          <ul class="gnb">
+            <li class="on"><a href="#section1">HOME</a></li>
+            <li><a href="#section2">ABOUT</a></li>
+            <li><a href="#section3">PORTFOLIO</a></li>
+            <li><a href="#section4">CONTACT</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- //#header -->
+      <div id="main_visual">
+        <section class="section" id="section1">
+          <h2>"RAN-UP"</h2>
+          <p>
+            더 높이, 더 멀리 준비 된<br />
+            <span>퍼블리셔 김 란</span>입니다.
+          </p>
+          <div class="img_glich">
+            <div class="figure-item">
+              <a class="figure-img glitch-hover"
+                ><img src="./img/img.jpg" alt="인물이미지" width="750" /><img src="./img/img.jpg" alt="인물이미지" width="750" /><img
+                  src="./img/img.jpg"
+                  alt="인물이미지"
+                  width="750"
+              /></a>
             </div>
           </div>
-        </div>
+          <div class="main_button">
+            <button class="resume hover-border">
+              <a href="#">이력서 보기</a>
+            </button>
+            <button class="git hover-border">
+              <a href="#">GitHube 보기</a>
+            </button>
+          </div>
+        </section>
       </div>
+      <!-- //#main_visual -->
+      <div id="content_wrap">
+        <section class="section" id="section2">
+          <div class="inner">
+            <div class="aboutMe clearfix">
+              <h3>ABOUT ME</h3>
+              <p>
+                모든 일을 하기 위해서는 도움닫기(ran-up) 준비기간이 필요합니다. 실전에 바로 투입될 수 있도록 웹표준,<br />
+                웹접근성을 지키기 위해 지속적으로 학습을 병행하면서 앞으로 나아가는 중입니다. 깃허브 블로그를 운영하며<br />
+                학습한 내용은 꾸준히 업로드하고 있습니다.
+              </p>
+              <div class="left">
+                <span>Name</span>
+                <p>김 란</p>
+                <span>Address</span>
+                <p>서울시 송파구 삼전동</p>
+                <span>Birth</span>
+                <p>1990. 07. 07</p>
+              </div>
+              <div class="right">
+                <span>Mail</span>
+                <p>rany9077@naver.com</p>
+                <span>Phone</span>
+                <p>010. 3253. 1470</p>
+                <span>GitHub</span>
+                <p>rany9077.github.io/portfolio/</p>
+              </div>
+            </div>
+            <div class="mySkills bar-graph">
+              <h3>MY SKILLS</h3>
+              <div class="animation">
+                <h4 class="title">HTML & CSS</h4>
+                <div class="progress-bar">
+                  <div class="bar"></div>
+                  <div class="rate" data-rate="85"></div>
+                </div>
+                <h4 class="title">SCSS</h4>
+                <div class="progress-bar">
+                  <div class="bar"></div>
+                  <div class="rate" data-rate="65"></div>
+                </div>
+                <h4 class="title">JAVA SCRIPT</h4>
+                <div class="progress-bar">
+                  <div class="bar"></div>
+                  <div class="rate" data-rate="50"></div>
+                </div>
+                <h4 class="title">JQUERY</h4>
+                <div class="progress-bar">
+                  <div class="bar"></div>
+                  <div class="rate" data-rate="50"></div>
+                </div>
+                <h4 class="title">REACT</h4>
+                <div class="progress-bar">
+                  <div class="bar"></div>
+                  <div class="rate" data-rate="50"></div>
+                </div>
+                <h4 class="title">ILLUSTRATOR & PHOTOSHOP</h4>
+                <div class="progress-bar">
+                  <div class="bar"></div>
+                  <div class="rate" data-rate="85"></div>
+                </div>
+              </div>
+            </div>
+            <div class="workExperience">
+              <h3>WORK EXPERIENCE</h3>
+              <div class="date">
+                <span>2022. 06 &#45; 2022. 10</span>
+                <span>2022. 06</span>
+                <span>2022. 05</span>
+                <span>2019. 12 &#45; 2021. 12</span>
+                <span>2017. 03 &#45; 2019. 09</span>
+              </div>
+              <div class="text">
+                <p>강남 그린 컴퓨터아카데미 - UI/UX 반응형 웹디자인&웹퍼블리셔 과정 수료</p>
+                <p>컴퓨터그래픽스운용기능사 필기</p>
+                <p>GTQ 1급</p>
+                <p>쁘리모드 - 직물 영업관리 및 무역사무 (2년 근무)</p>
+                <p>대광직물 - 직물 영업 관리 (2년 7개월 근무)</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="section3"><h3>PORTFOLIO</h3></section>
+        <section class="section" id="section4"><h3>CONTACT INFO</h3></section>
+      </div>
+      <footer><p>Copyright 2022. Ran. All rights reserved.</p></footer>
     </div>
+    <script src="./js/modernizr-custom.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script src="./js/gnb.js"></script>
   </body>
 </html>
