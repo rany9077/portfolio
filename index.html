@@ -6,118 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio</title>
     <!-- <link rel="stylesheet" href="./css/normalize.css" /> -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/font.css" />
     <link rel="stylesheet" href="./css/main.css" />
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="./js/bar.js"></script>
   </head>
   <body>
     <div id="wrap">
-      <header id="header inner">
+      <header id="header">
         <nav>
-          <h1 class="logo">
-            <a href="https://rany9077.github.io/portfolio/"><img src="./img/logo.png" alt="로고" width="50" /></a>
-          </h1>
+          <h1 class="logo">R</h1>
+          <svg class="pulse" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <circle id="Oval" cx="512" cy="512" r="512"></circle>
+            <circle id="Oval" cx="512" cy="512" r="512"></circle>
+            <circle id="Oval" cx="512" cy="512" r="512"></circle>
+          </svg>
           <ul class="gnb">
-            <li class="on"><a href="#section1">HOME</a></li>
-            <li><a href="#section2">ABOUT</a></li>
-            <li><a href="#section3">PORTFOLIO</a></li>
-            <li><a href="#section4">CONTACT</a></li>
+            <li class="style1 on"><a href="#section1">HOME</a></li>
+            <li class="style1"><a href="#section2">ABOUT</a></li>
+            <li class="style1"><a href="#section3">PORTFOLIO</a></li>
+            <li class="style1"><a href="#section4">CONTACT</a></li>
           </ul>
         </nav>
       </header>
       <!-- //#header -->
-      <div id="main_visual">
+      <div id="main_visual" class="inner">
         <section class="section" id="section1">
-          <h2>"RAN-UP"</h2>
+          <h2 class="glitch" data-text="RAN-UP">RAN-UP</h2>
           <p>
             더 높이, 더 멀리 준비 된<br />
             <span>퍼블리셔 김 란</span>입니다.
           </p>
-          <div class="img_glich">
-            <div class="figure-item">
-              <a class="figure-img glitch-hover"
-                ><img src="./img/img.jpg" alt="인물이미지" width="750" /><img src="./img/img.jpg" alt="인물이미지" width="750" /><img
-                  src="./img/img.jpg"
-                  alt="인물이미지"
-                  width="750"
-              /></a>
-            </div>
-          </div>
+          <div class="main_img"><img src="./img/img.jpg" alt="메인사진" width="750" /></div>
           <div class="main_button">
-            <button class="resume hover-border">
+            <button>
               <a href="#">이력서 보기</a>
             </button>
-            <button class="git hover-border">
-              <a href="#">GitHube 보기</a>
+            <button>
+              <a href="https://github.com/rany9077?tab=repositories" target="_blank">Git 보기</a>
             </button>
           </div>
         </section>
       </div>
       <!-- //#main_visual -->
       <div id="content_wrap">
-        <section class="section" id="section2">
-          <div class="inner">
-            <div class="aboutMe clearfix">
-              <h3>ABOUT ME</h3>
-              <p>
-                모든 일을 하기 위해서는 도움닫기(ran-up) 준비기간이 필요합니다. 실전에 바로 투입될 수 있도록 웹표준,<br />
-                웹접근성을 지키기 위해 지속적으로 학습을 병행하면서 앞으로 나아가는 중입니다. 깃허브 블로그를 운영하며<br />
-                학습한 내용은 꾸준히 업로드하고 있습니다.
-              </p>
-              <div class="left">
-                <span>Name</span>
-                <p>김 란</p>
-                <span>Address</span>
-                <p>서울시 송파구 삼전동</p>
-                <span>Birth</span>
-                <p>1990. 07. 07</p>
+        <section class="section inner" id="section2">
+          <div class="aboutMe clearfix">
+            <h3>ABOUT ME</h3>
+            <p>
+              모든 일을 하기 위해서는 도움닫기(ran-up) 준비기간이 필요합니다. 실전에 바로 투입될 수 있도록 웹표준, 웹접근성을 지키기 위해 지속적으로
+              학습을 병행하면서 앞으로 나아가는 중입니다. 깃허브 블로그를 운영하며 학습한 내용은 꾸준히 업로드하고 있습니다.
+            </p>
+            <div class="left">
+              <span>Name</span>
+              <p>김 란</p>
+              <span>Address</span>
+              <p>서울시 송파구 삼전동</p>
+              <span>Birth</span>
+              <p>1990. 07. 07</p>
+            </div>
+            <div class="right">
+              <span>Mail</span>
+              <p>rany9077@naver.com</p>
+              <span>Phone</span>
+              <p>010. 3253. 1470</p>
+              <span>GitHub</span>
+              <p>rany9077.github.io/portfolio/</p>
+            </div>
+          </div>
+          <div class="mySkills bar-graph">
+            <h3>MY SKILLS</h3>
+            <div class="animation">
+              <h4 class="title">HTML & CSS</h4>
+              <div class="progress-bar">
+                <div class="bar"></div>
+                <div class="rate" data-rate="85"></div>
               </div>
-              <div class="right">
-                <span>Mail</span>
-                <p>rany9077@naver.com</p>
-                <span>Phone</span>
-                <p>010. 3253. 1470</p>
-                <span>GitHub</span>
-                <p>rany9077.github.io/portfolio/</p>
+              <h4 class="title">SCSS</h4>
+              <div class="progress-bar">
+                <div class="bar"></div>
+                <div class="rate" data-rate="65"></div>
+              </div>
+              <h4 class="title">JAVA SCRIPT</h4>
+              <div class="progress-bar">
+                <div class="bar"></div>
+                <div class="rate" data-rate="50"></div>
+              </div>
+              <h4 class="title">JQUERY</h4>
+              <div class="progress-bar">
+                <div class="bar"></div>
+                <div class="rate" data-rate="50"></div>
+              </div>
+              <h4 class="title">REACT</h4>
+              <div class="progress-bar">
+                <div class="bar"></div>
+                <div class="rate" data-rate="50"></div>
+              </div>
+              <h4 class="title">ILLUSTRATOR & PHOTOSHOP</h4>
+              <div class="progress-bar">
+                <div class="bar"></div>
+                <div class="rate" data-rate="85"></div>
               </div>
             </div>
-            <div class="mySkills bar-graph">
-              <h3>MY SKILLS</h3>
-              <div class="animation">
-                <h4 class="title">HTML & CSS</h4>
-                <div class="progress-bar">
-                  <div class="bar"></div>
-                  <div class="rate" data-rate="85"></div>
-                </div>
-                <h4 class="title">SCSS</h4>
-                <div class="progress-bar">
-                  <div class="bar"></div>
-                  <div class="rate" data-rate="65"></div>
-                </div>
-                <h4 class="title">JAVA SCRIPT</h4>
-                <div class="progress-bar">
-                  <div class="bar"></div>
-                  <div class="rate" data-rate="50"></div>
-                </div>
-                <h4 class="title">JQUERY</h4>
-                <div class="progress-bar">
-                  <div class="bar"></div>
-                  <div class="rate" data-rate="50"></div>
-                </div>
-                <h4 class="title">REACT</h4>
-                <div class="progress-bar">
-                  <div class="bar"></div>
-                  <div class="rate" data-rate="50"></div>
-                </div>
-                <h4 class="title">ILLUSTRATOR & PHOTOSHOP</h4>
-                <div class="progress-bar">
-                  <div class="bar"></div>
-                  <div class="rate" data-rate="85"></div>
-                </div>
-              </div>
-            </div>
-            <div class="workExperience">
-              <h3>WORK EXPERIENCE</h3>
+          </div>
+          <div class="workExperience">
+            <h3>EXPERIENCE</h3>
+            <div class="history">
               <div class="date">
                 <span>2022. 06 &#45; 2022. 10</span>
                 <span>2022. 06</span>
@@ -126,22 +119,165 @@
                 <span>2017. 03 &#45; 2019. 09</span>
               </div>
               <div class="text">
-                <p>강남 그린 컴퓨터아카데미 - UI/UX 반응형 웹디자인&웹퍼블리셔 과정 수료</p>
+                <p>강남 그린컴퓨터 &#45; UI/UX 반응형 웹디자인&웹퍼블리셔 과정 수료</p>
                 <p>컴퓨터그래픽스운용기능사 필기</p>
                 <p>GTQ 1급</p>
-                <p>쁘리모드 - 직물 영업관리 및 무역사무 (2년 근무)</p>
-                <p>대광직물 - 직물 영업 관리 (2년 7개월 근무)</p>
+                <p>직물 영업관리 및 무역사무 (2년 근무)</p>
+                <p>직물 영업 관리 (2년 7개월 근무)</p>
               </div>
             </div>
           </div>
         </section>
-        <section class="section" id="section3"><h3>PORTFOLIO</h3></section>
-        <section class="section" id="section4"><h3>CONTACT INFO</h3></section>
+        <section class="section inner" id="section3">
+          <h3>PORTFOLIO</h3>
+          <div class="pj01 pj_desc">
+            <img src="./img/project01.png" alt="프로젝트01" />
+            <div class="pj_hover_text">
+              <h2>PROJECT 01</h2>
+            </div>
+            <div class="text_bg pj_text">
+              <div class="text_wrap">
+                <h4 class="pj_tit">국립제주박물관</h4>
+                <ul class="pj_info">
+                  <li>제작기간 : 3주</li>
+                  <li>관공서</li>
+                  <li>HTML, CSS</li>
+                </ul>
+                <p>
+                  header, section, footer 등의 HTML 구조를 배우며 처음 작업한 프로젝트입니다. 웹 콘텐츠를 제작할 때에는 장애에 구애됨이 없이 누구나
+                  접근할 수 있도록 제작하여야 한다는 웹 접근성을 위해 웹 표준을 준수하여 제작한 웹사이트입니다.
+                </p>
+                <div class="pj_btn">
+                  <a href="#"
+                    >기획서 보기
+                    <div class="arrow"></div
+                  ></a>
+                  <a href="https://rany9077.github.io/project01/"
+                    >사이트 보기
+                    <div class="arrow"></div
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pj02 pj_desc">
+            <img src="./img/project02.png" alt="프로젝트02" />
+            <div class="pj_hover_text">
+              <h2>PROJECT 02</h2>
+            </div>
+            <div class="text_bg pj_text">
+              <div class="text_wrap">
+                <h4 class="pj_tit">포카리스웨트</h4>
+                <ul class="pj_info">
+                  <li>제작기간 : 1주</li>
+                  <li>반응형</li>
+                  <li>Java Script, jQuery</li>
+                </ul>
+                <p>
+                  반응형 웹 구현을 위해 분기점을 5개로 나누어 정교하게 작업한 프로젝트 입니다. 부드럽게 연결되는 반응형 웹 구현을 위해 상대적 단위를
+                  직접 적용하며 상대적 단위의 소중함과 중요성을 깨달을 수 있는 작업이었습니다.
+                </p>
+                <div class="pj_btn">
+                  <a href="#"
+                    >기획서 보기
+                    <div class="arrow"></div
+                  ></a>
+                  <a href="https://rany9077.github.io/project02/"
+                    >사이트 보기
+                    <div class="arrow"></div
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pj03 pj_desc">
+            <img src="./img/project03.png" alt="프로젝트03" />
+            <div class="pj_hover_text">
+              <h2>PROJECT 03</h2>
+            </div>
+            <div class="text_bg pj_text">
+              <div class="text_wrap">
+                <h4 class="pj_tit">SYSTEM STUDIOS</h4>
+                <ul class="pj_info">
+                  <li>제작기간 : 1주</li>
+                  <li>반응형</li>
+                  <li>SCSS</li>
+                </ul>
+                <p>
+                  처음 SCSS를 사용하여 작업한 프로젝트입니다. CSS보다 가독성과 코드의 재활용성을 올리고, nesting이나 조건문과 반복문 등 다양한 기능을
+                  사용하여 작업하는 기간동안 흥미롭게 배웠습니다.
+                </p>
+                <div class="pj_btn">
+                  <a href="https://rany9077.github.io/project03/"
+                    >사이트 보기
+                    <div class="arrow"></div
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pj04 pj_desc">
+            <img src="./img/project04.png" alt="프로젝트04" />
+            <div class="pj_hover_text">
+              <h2>PROJECT 04</h2>
+            </div>
+            <div class="text_bg pj_text">
+              <div class="text_wrap">
+                <h4 class="pj_tit">공공공</h4>
+                <ul class="pj_info">
+                  <li>제작기간 : 3주</li>
+                  <li>UX/UI</li>
+                  <li>FIGMA</li>
+                </ul>
+                <p>
+                  4명의 팀원들과 진행한 UXUI 앱 프로젝트입니다. 스포츠 레슨비로 부담스러운 유저들을 기반으로 레슨비 쉐어하여 쉽게 이용할 수 있도록
+                  기획한 앱입니다.
+                </p>
+                <div class="pj_btn">
+                  <a href="#"
+                    >기획서 보기
+                    <div class="arrow"></div
+                  ></a>
+                  <a
+                    class="figma"
+                    href="https://www.figma.com/proto/E6IywQTrTjvWZlJNmX1H6X/%EC%A1%B0%EB%B3%84%EA%B3%BC%EC%A0%9C(3%EC%A1%B0)_%EC%A0%95%EB%B3%B4%EA%B5%AC%EC%A1%B0%EB%8F%84?page-id=117%3A3257&node-id=117%3A3350&viewport=1053%2C435%2C0.29&scaling=min-zoom&starting-point-node-id=117%3A3350"
+                    >프로토타입 보기
+                    <div class="arrow"></div
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section inner" id="section4">
+          <h3>CONTACT</h3>
+          <div class="info">
+            <p>
+              아직 많이 부족한 저의 포트폴리오를 봐주셔서 감사합니다. <br />
+              저에게 궁금하신 점이 있으시면 연락 부탁드립니다. <br />연락 주시면 3일 이내 회신드리겠습니다. 감사합니다.
+            </p>
+            <div class="kakao"><span>Kakao talk to ME ▾</span><img src="./img/kakao.jpeg" alt="카카오톡 큐알코드" /></div>
+            <div class="contact_button">
+              <button>
+                <a href="#">이력서 보기</a>
+              </button>
+              <button>
+                <a href="https://github.com/rany9077?tab=repositories" target="_blank">Git 보기</a>
+              </button>
+            </div>
+            <div class="nameCard"><img src="./img/namecard.png" alt="명함" /></div>
+          </div>
+        </section>
       </div>
-      <footer><p>Copyright 2022. Ran. All rights reserved.</p></footer>
+      <footer>
+        <p>Copyright 2022. Ran. All rights reserved.</p>
+      </footer>
+      <div class="cursor"></div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="./js/modernizr-custom.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-    <script src="./js/gnb.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
