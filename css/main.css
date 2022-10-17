@@ -1000,6 +1000,9 @@ footer p {
     height: 15px;
     background-size: 15px;
   }
+  #section2 {
+    margin-top: 7em;
+  }
   .aboutMe {
     margin: -20em 1em 0 1em;
   }
