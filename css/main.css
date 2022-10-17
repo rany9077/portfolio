@@ -24,9 +24,11 @@ h3:after {
 section {
   height: 100vh;
 }
+
+/* cursor */
 .cursor {
   z-index: 999;
-  position: fixed;
+  position: absolute;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -51,6 +53,7 @@ section {
   transform: translate(-30%, -30%);
   border-radius: 50%;
 }
+
 /* nav */
 #header {
   position: relative;
@@ -61,7 +64,9 @@ nav h1 {
   top: 35%;
   left: 8.5%;
 }
-
+nav h1 a {
+  font-family: "Nanum Myeongjo", serif;
+}
 .pulse {
   z-index: -1;
   position: absolute;
@@ -103,17 +108,16 @@ nav h1 {
   }
 }
 nav {
-  position: absolute;
-  top: 0;
   z-index: 2;
   background: rgba(247, 251, 254, 0.6);
   padding: 1em 30em;
   width: 100%;
   backdrop-filter: blur(10px);
+  position: fixed;
 }
 nav.sticky {
   left: 0;
-  background: rgba(230, 230, 231, 0.7);
+  background: rgba(230, 230, 230, 0.6);
   position: fixed;
   z-index: 222;
 }
@@ -159,6 +163,11 @@ nav .gnb li a:hover::after {
 }
 
 /* main_visual */
+.main_img {
+  position: fixed;
+  z-index: -1;
+  overflow: hidden;
+}
 #main_visual {
   position: relative;
 }
@@ -417,7 +426,6 @@ nav .gnb li a:hover::after {
     transform: skew(2deg);
   }
 }
-
 #main_visual p {
   color: #4e4e4e;
   letter-spacing: 0.05em;
@@ -435,9 +443,10 @@ nav .gnb li a:hover::after {
   position: relative;
   top: 750px;
   left: 56%;
+  display: flex;
 }
 .main_button button {
-  margin-right: 2em;
+  margin-right: 2.5em;
   width: 190px;
   height: 50px;
   border: 2px solid #0511f2;
@@ -459,7 +468,7 @@ nav .gnb li a:hover::after {
 .main_button button a:hover::after {
   content: "";
   display: inline-block;
-  background: url(../img/link.png) no-repeat;
+  background: url(../img/wt_link.png) no-repeat;
   background-size: 20px;
   width: 20px;
   height: 20px;
@@ -468,19 +477,11 @@ nav .gnb li a:hover::after {
 .main_button button a:after {
   content: "";
   display: inline-block;
-  background: url(../img/link_blue.png) no-repeat;
+  background: url(../img/blue_link.png) no-repeat;
   background-size: 18px;
   width: 18px;
   height: 18px;
   margin-left: 5px;
-}
-
-/* img_glich */
-.main_img {
-  margin-left: 0;
-  position: fixed;
-  z-index: -1;
-  overflow: hidden;
 }
 
 /* section2 */
@@ -557,7 +558,7 @@ nav .gnb li a:hover::after {
   font-size: 1.1em;
 }
 
-/* content_wrap */
+/* section3 */
 #section3 {
   height: 100%;
 }
@@ -668,15 +669,15 @@ nav .gnb li a:hover::after {
   font-size: 1.2em;
 }
 .pj_btn a {
-  background: linear-gradient(0deg, #5f66ea, #0511f2) no-repeat right bottom / 0 var(--bg-h);
+  background: linear-gradient(270deg, #5f66ea, #0511f2) no-repeat right bottom / 0 var(--bg-h);
   transition: background-size 350ms;
   --bg-h: 100%;
   line-height: 30px;
   box-sizing: border-box;
-  padding: 1em;
+  padding: 0.5em 0.8em 0.5em 0.9em;
   margin-right: 1.5em;
   display: inline-block;
-  width: 8.8em;
+  width: 8.2em;
   font-weight: 600;
 }
 .pj_btn a:where(:hover, :focus-visible) {
@@ -685,11 +686,11 @@ nav .gnb li a:hover::after {
   color: #fff;
   box-sizing: border-box;
   line-height: 30px;
-  padding: 1em;
+  padding: 0.5em 0.8em 0.5em 0.9em;
   margin-right: 1.5em;
 }
 .pj_btn .arrow {
-  background: url(../img/next.png) no-repeat;
+  background: url(../img/bk_next.png) no-repeat;
   background-size: 30px;
   display: inline-block;
   position: absolute;
@@ -698,7 +699,7 @@ nav .gnb li a:hover::after {
   margin-left: 0.5em;
 }
 .pj_btn a:hover .arrow {
-  background: url(../img/next_wh.png) no-repeat;
+  background: url(../img/wt_next.png) no-repeat;
   background-size: 30px;
   display: inline-block;
   position: absolute;
@@ -717,15 +718,17 @@ nav .gnb li a:hover::after {
   width: 770px;
   height: 580px;
 }
-.pj04 .figma {
+.pj04 .figma_btn {
   box-sizing: border-box;
-  padding: 1em;
+  padding: 0.5em 0.8em 0.5em 0.9em;
   margin-right: 1.5em;
   width: 10em;
 }
 .pj_desc.pj04 {
   margin-bottom: 0;
 }
+
+/* section4 */
 #section4 {
   position: relative;
   height: 100%;
@@ -747,6 +750,7 @@ nav .gnb li a:hover::after {
 .contact_button {
   top: 70%;
   margin-bottom: 10em;
+  display: flex;
 }
 .contact_button button {
   margin-right: 2em;
@@ -771,7 +775,7 @@ nav .gnb li a:hover::after {
 .contact_button button a:hover::after {
   content: "";
   display: inline-block;
-  background: url(../img/link.png) no-repeat;
+  background: url(../img/wt_link.png) no-repeat;
   background-size: 20px;
   width: 20px;
   height: 20px;
@@ -780,7 +784,7 @@ nav .gnb li a:hover::after {
 .contact_button button a:after {
   content: "";
   display: inline-block;
-  background: url(../img/link_blue.png) no-repeat;
+  background: url(../img/blue_link.png) no-repeat;
   background-size: 18px;
   width: 18px;
   height: 18px;
