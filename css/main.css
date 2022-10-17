@@ -806,7 +806,6 @@ nav .gnb li a:hover::after {
   left: 38.5em;
 }
 .nameCard img {
-  display: inline-block;
   width: 900px;
 }
 
@@ -827,4 +826,279 @@ footer p {
   transform: translate(-50%, -50%);
   font-family: "Poppins", sans-serif;
   font-weight: 500;
+}
+
+/* ==========================
+         MEDIA QUERY 
+============================= */
+
+/* ================ 태블릿 ~ 랩탑 ================ */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #wrap {
+    width: 100%;
+  }
+  nav {
+    padding: 1em 15em;
+  }
+  nav h1 {
+    left: 0.6em;
+  }
+  .pulse {
+    left: 0.5em;
+  }
+  nav .gnb li {
+    flex: none;
+    margin-right: 4em;
+  }
+  #main_visual {
+    margin-bottom: 10em;
+  }
+  #main_visual h2 {
+    margin-top: -1em;
+    font-size: 4em;
+  }
+  #section1 p::before {
+    margin-top: -5em;
+  }
+  #main_visual p {
+    font-size: 1.5em;
+  }
+  .main_img {
+    position: relative;
+    top: 10%;
+  }
+  .main_img img {
+    width: 50%;
+  }
+  .main_button {
+    top: 480px;
+    position: absolute;
+  }
+  .main_button button,
+  .contact_button button {
+    width: 130px;
+    height: 40px;
+  }
+  .main_button button a,
+  .contact_button button a {
+    font-size: 1em;
+  }
+  .main_button button a:after,
+  .main_button button a:hover::after,
+  .contact_button button a:after,
+  .contact_button button a:hover::after {
+    width: 15px;
+    height: 15px;
+    background-size: 15px;
+  }
+  .aboutMe {
+    margin: -6em 1em;
+  }
+  .mySkills {
+    margin: 10em 1em 0 1em;
+  }
+  .workExperience {
+    margin: 5em 1em 0 1em;
+  }
+  #section3,
+  #section4 {
+    margin-left: 0.7em;
+    margin-right: 0.7em;
+  }
+  .pj_desc img {
+    left: -4em;
+  }
+  .pj02 img {
+    position: absolute;
+    left: -14.5em;
+  }
+  .pj04 img {
+    position: absolute;
+    left: -12.5em;
+  }
+  .pj_desc .pj_hover_text h2 {
+    font-size: 1.7em;
+  }
+  .pj_desc .pj_info li {
+    font-size: 0.9em;
+  }
+  .pj_desc .pj_text p {
+    font-size: 1em;
+  }
+  .pj_btn {
+    font-size: 1em;
+  }
+  .pj_btn a {
+    width: 8em;
+  }
+  #section4 p {
+    font-size: 1.1em;
+  }
+  .nameCard {
+    left: 18em;
+    top: 6.7em;
+  }
+  .nameCard img {
+    width: 550px;
+  }
+}
+/* ================ 모바일 ================ */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  #wrap {
+    width: 100%;
+  }
+  nav h1 {
+    margin-left: 2em;
+  }
+  nav .gnb {
+    display: none;
+  }
+  .pulse {
+    margin-left: 3.5em;
+    margin-top: -1em;
+  }
+  nav.sticky {
+    display: none;
+  }
+  #main_visual h2 {
+    margin-top: -3.5em;
+    font-size: 2em;
+  }
+  #section1 p::before {
+    margin-top: -12.5em;
+    width: 20%;
+  }
+  #main_visual p {
+    font-size: 1em;
+  }
+  .main_img {
+    position: relative;
+    top: 10%;
+  }
+  .main_img img {
+    width: 50%;
+  }
+  .main_button {
+    left: 12%;
+    top: 400px;
+    position: absolute;
+  }
+  .main_button button,
+  .contact_button button {
+    width: 130px;
+    height: 40px;
+  }
+  .main_button button a,
+  .contact_button button a {
+    font-size: 1em;
+  }
+  .main_button button a:after,
+  .main_button button a:hover::after,
+  .contact_button button a:after,
+  .contact_button button a:hover::after {
+    width: 15px;
+    height: 15px;
+    background-size: 15px;
+  }
+  .aboutMe {
+    margin: -20em 1em 0 1em;
+  }
+  .aboutMe p {
+    font-size: 1em;
+  }
+  .aboutMe .left,
+  .aboutMe .right {
+    float: none;
+  }
+  .mySkills {
+    margin: 5em 1em 0 1em;
+  }
+  .progress-bar {
+    width: 300px;
+  }
+  .workExperience {
+    margin: 5em 1em 0 1em;
+  }
+  .workExperience .date span {
+    margin-bottom: 1.5em;
+    line-height: 1.3em;
+  }
+  .workExperience .text p {
+    line-height: 1.5em;
+    margin-bottom: 1.2em;
+    font-size: 1em;
+  }
+  #section3,
+  #section4 {
+    margin-left: 0.7em;
+    margin-right: 0.7em;
+  }
+  .pj_desc {
+    padding: 12em 0;
+  }
+  .pj_desc .pj_hover_text {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    padding: 0;
+  }
+  .pj_desc .pj_text,
+  .pj_desc.pj02 .pj_text {
+    width: 100%;
+    left: 0;
+    top: 50%;
+  }
+  .pj_desc img {
+    margin-left: 5em;
+    width: 640px;
+    height: 410px;
+  }
+  .pj02 img {
+    position: absolute;
+    left: -14.5em;
+  }
+  .pj04 img {
+    position: absolute;
+    left: -12.5em;
+  }
+  .pj_desc .pj_hover_text h2 {
+    font-size: 1.7em;
+  }
+  .pj_desc .pj_info li {
+    font-size: 0.9em;
+  }
+  .pj_desc .pj_text p {
+    font-size: 1em;
+  }
+  .pj_btn {
+    font-size: 1em;
+  }
+  .pj_btn a {
+    width: 8em;
+  }
+  #section4 p {
+    font-size: 1em;
+    padding-bottom: 5em;
+  }
+  .kakao span {
+    font-size: 1em;
+  }
+  .kakao img {
+    width: 90px;
+  }
+  .nameCard {
+    left: 7em;
+    top: 12em;
+  }
+  .nameCard img {
+    width: 300px;
+  }
+  .contact_button {
+    margin-bottom: 5em;
+    margin-left: 2em;
+  }
+  footer p {
+    width: 100%;
+    margin-left: 2em;
+  }
 }
