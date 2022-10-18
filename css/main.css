@@ -961,11 +961,11 @@ footer p {
     display: none;
   }
   #main_visual h2 {
-    margin-top: -3.5em;
+    margin-top: -2em;
     font-size: 2em;
   }
   #section1 p::before {
-    margin-top: -12.5em;
+    margin-top: -10em;
     width: 20%;
   }
   #main_visual p {
@@ -979,18 +979,19 @@ footer p {
     width: 50%;
   }
   .main_button {
-    left: 12%;
-    top: 400px;
+    left: 10%;
+    top: 390px;
     position: absolute;
   }
   .main_button button,
   .contact_button button {
-    width: 130px;
+    width: 150px;
     height: 40px;
+    margin-right: 1em;
   }
   .main_button button a,
   .contact_button button a {
-    font-size: 1em;
+    font-size: 1.1em;
   }
   .main_button button a:after,
   .main_button button a:hover::after,
@@ -1004,7 +1005,7 @@ footer p {
     margin-top: 7em;
   }
   .aboutMe {
-    margin: -20em 1em 0 1em;
+    margin: -28em 1em 0 1em;
   }
   .aboutMe p {
     font-size: 1em;
@@ -1014,7 +1015,7 @@ footer p {
     float: none;
   }
   .mySkills {
-    margin: 5em 1em 0 1em;
+    margin: 4em 1em 0 1em;
   }
   .progress-bar {
     width: 300px;
@@ -1035,6 +1036,10 @@ footer p {
   #section4 {
     margin-left: 0.7em;
     margin-right: 0.7em;
+  }
+  #section3 h3,
+  #section4 h3 {
+    padding-top: 3em;
   }
   .pj_desc {
     padding: 12em 0;
