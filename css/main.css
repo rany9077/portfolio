@@ -57,16 +57,15 @@ section {
 /* top button */
 .top_btn {
   position: fixed;
-  bottom: 9%;
+  bottom: 10%;
   right: 2%;
   opacity: 0;
   visibility: hidden;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   z-index: 999;
   background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 50px 50px;
+  background-size: 45px 45px;
   cursor: pointer;
   background-image: url(../img/top_btn.png);
 }
