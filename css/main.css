@@ -980,7 +980,7 @@ footer p {
   }
   .main_button {
     left: 10%;
-    top: 390px;
+    top: 400px;
     position: absolute;
   }
   .main_button button,
@@ -1005,7 +1005,7 @@ footer p {
     margin-top: 7em;
   }
   .aboutMe {
-    margin: -25em 1em 0 1em;
+    margin: -22em 1em 0 1em;
   }
   .aboutMe p {
     font-size: 1em;
@@ -1024,13 +1024,15 @@ footer p {
     margin: 5em 1em 0 1em;
   }
   .workExperience .date span {
-    margin-bottom: 1.5em;
-    line-height: 1.3em;
+    margin-bottom: 1.6em;
+    font-size: 0.9em;
+    letter-spacing: 0.15em;
   }
   .workExperience .text p {
-    line-height: 1.5em;
-    margin-bottom: 1.2em;
+    line-height: 1.3em;
+    margin-bottom: 0.8em;
     font-size: 1em;
+    letter-spacing: -0.01em;
   }
   #section3,
   #section4 {
