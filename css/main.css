@@ -452,8 +452,9 @@ nav .gnb li a:hover::after {
   border: 2px solid #0511f2;
   transition: 0.3s;
   background: #fff;
+  cursor: pointer;
 }
-.main_button button a {
+.main_button button span {
   color: #0511f2;
   font-size: 1.3em;
   letter-spacing: 0.09em;
@@ -462,10 +463,10 @@ nav .gnb li a:hover::after {
 .main_button button:hover {
   box-shadow: inset 0 -4em 0 0 #0511f2;
 }
-.main_button button:hover a {
+.main_button button:hover span {
   color: #fff;
 }
-.main_button button a:hover::after {
+.main_button button span:hover::after {
   content: "";
   display: inline-block;
   background: url(../img/wt_link.png) no-repeat;
@@ -474,7 +475,7 @@ nav .gnb li a:hover::after {
   height: 20px;
   margin-left: 5px;
 }
-.main_button button a:after {
+.main_button button span:after {
   content: "";
   display: inline-block;
   background: url(../img/blue_link.png) no-repeat;
@@ -759,8 +760,9 @@ nav .gnb li a:hover::after {
   border: 2px solid #0511f2;
   transition: 0.3s;
   background: #fff;
+  cursor: pointer;
 }
-.contact_button button a {
+.contact_button button span {
   color: #0511f2;
   font-size: 1.3em;
   letter-spacing: 0.09em;
@@ -769,10 +771,10 @@ nav .gnb li a:hover::after {
 .contact_button button:hover {
   box-shadow: inset 0 -4em 0 0 #0511f2;
 }
-.contact_button button:hover a {
+.contact_button button:hover span {
   color: #fff;
 }
-.contact_button button a:hover::after {
+.contact_button button span:hover::after {
   content: "";
   display: inline-block;
   background: url(../img/wt_link.png) no-repeat;
@@ -781,7 +783,7 @@ nav .gnb li a:hover::after {
   height: 20px;
   margin-left: 5px;
 }
-.contact_button button a:after {
+.contact_button button span:after {
   content: "";
   display: inline-block;
   background: url(../img/blue_link.png) no-repeat;
