@@ -54,6 +54,31 @@ section {
   border-radius: 50%;
 }
 
+/* top button */
+.top_btn {
+  position: fixed;
+  bottom: 9%;
+  right: 2%;
+  opacity: 0;
+  visibility: hidden;
+  width: 50px;
+  height: 50px;
+  z-index: 999;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 50px 50px;
+  cursor: pointer;
+  background-image: url(../img/top_btn.png);
+}
+.top_btn:hover {
+  transform: scale(1.1);
+}
+.top_btn.active-arrow {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 /* nav */
 #header {
   position: relative;
@@ -948,6 +973,9 @@ footer .w3c_valid {
   .nameCard img {
     width: 550px;
   }
+  .cursor {
+    display: none;
+  }
 }
 /* ================ 모바일 ================ */
 @media screen and (min-width: 375px) and (max-width: 767px) {
@@ -1120,6 +1148,9 @@ footer .w3c_valid {
     margin-top: -1em;
   }
   footer .w3c_valid {
-    margin: 3em 5em;
+    padding: 1em 5em;
+  }
+  .cursor {
+    display: none;
   }
 }

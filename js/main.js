@@ -90,3 +90,24 @@ document.addEventListener("mousemove", (e) => {
   cursor.style.top = y + "px";
   cursor.style.left = x + "px";
 });
+
+//top button
+$(function () {
+  "use strict";
+  $(document).ready(function () {
+    var offset = 300;
+    var duration = 400;
+    jQuery(window).on("scroll", function () {
+      if (jQuery(this).scrollTop() > offset) {
+        jQuery(".top_btn").addClass("active-arrow");
+      } else {
+        jQuery(".top_btn").removeClass("active-arrow");
+      }
+    });
+    jQuery(".top_btn").on("click", function (event) {
+      event.preventDefault();
+      jQuery("html, body").animate({ scrollTop: 0 }, duration);
+      return false;
+    });
+  });
+});
