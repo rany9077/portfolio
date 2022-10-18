@@ -829,6 +829,11 @@ footer p {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
+footer .w3c_valid {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1.5em;
+}
 
 /* ==========================
          MEDIA QUERY 
@@ -1112,5 +1117,9 @@ footer p {
   footer p {
     width: 100%;
     margin-left: 2em;
+    margin-top: -1em;
+  }
+  footer .w3c_valid {
+    margin: 3em 5em;
   }
 }
