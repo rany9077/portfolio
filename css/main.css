@@ -1033,9 +1033,9 @@ footer .w3c_valid {
   }
   .main_button {
     left: -125%;
-    top: 165px;
     position: absolute;
     gap: 0;
+    margin: 11em 0;
   }
   .main_button button,
   .contact_button button {
