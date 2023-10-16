@@ -83,19 +83,21 @@ section {
   position: relative;
 }
 nav h1 {
-  position: absolute;
   font-size: 2em;
-  top: 35%;
-  left: 8.5%;
+  position: relative;
+  display: inline-block;
+  line-height: 1.2;
 }
 nav h1 a {
   font-family: "Nanum Myeongjo", serif;
+  font-weight: 600;
+  display: inline-block;
+  padding: 8px 16px;
 }
 .pulse {
   z-index: -1;
   position: absolute;
-  left: 8%;
-  max-width: 3rem;
+  left: 0;
 }
 .pulse circle {
   fill: #0511f2;
@@ -134,11 +136,18 @@ nav h1 a {
 nav {
   z-index: 2;
   background: rgba(247, 251, 254, 0.6);
-  padding: 1em 30em;
   width: 100%;
   backdrop-filter: blur(10px);
   position: fixed;
+  padding: 0.8em;
 }
+nav > .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2em 0 0;
+}
+
 nav.sticky {
   left: 0;
   background: rgba(230, 230, 230, 0.6);
@@ -149,10 +158,10 @@ nav .gnb {
   display: flex;
   width: 100%;
   max-width: 700px;
-  margin: auto;
 }
 nav .gnb li {
   flex: 1 1 200px;
+  text-align: right;
 }
 nav .gnb li a {
   color: #333;
@@ -195,23 +204,28 @@ nav .gnb li a:hover::after {
 #main_visual {
   position: relative;
 }
-#main_visual h2 {
+#main_visual .main_box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5em;
+  position: absolute;
+  left: 58%;
+  top: 54%;
+  transform: translateY(-54%);
+}
+#main_visual .main_box h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   letter-spacing: 0.1em;
   font-size: 7em;
-  position: absolute;
-  top: 30%;
-  left: 56%;
   animation: glitch-skew 1s infinite linear alternate-reverse;
 }
-#section1 p::before {
-  content: "";
-  display: block;
-  margin-bottom: 20px;
+#section1 .main_box .split {
+  display: inline-block;
   width: 70px;
   height: 2px;
-  background-color: #4e4e4e;
+  background-color: #777777;
 }
 .glitch {
   position: relative;
@@ -455,22 +469,17 @@ nav .gnb li a:hover::after {
   letter-spacing: 0.05em;
   font-size: 2em;
   line-height: 1.8em;
-  position: absolute;
-  top: 50%;
-  left: 56%;
 }
 #main_visual p span {
   color: #1f1f1f;
   font-weight: 700;
 }
 .main_button {
-  position: relative;
-  top: 750px;
-  left: 56%;
   display: flex;
+  align-items: center;
+  gap: 1em;
 }
 .main_button button {
-  margin-right: 2.5em;
   width: 190px;
   height: 50px;
   border: 2px solid #0511f2;
@@ -481,8 +490,9 @@ nav .gnb li a:hover::after {
 .main_button button span {
   color: #0511f2;
   font-size: 1.3em;
-  letter-spacing: 0.09em;
+  letter-spacing: -0.03rem;
   padding: 0.5em 1em;
+  display: inline-block;
 }
 .main_button button:hover {
   box-shadow: inset 0 -4em 0 0 #0511f2;
@@ -498,6 +508,7 @@ nav .gnb li a:hover::after {
   width: 20px;
   height: 20px;
   margin-left: 5px;
+  margin-bottom: -2px;
 }
 .main_button button span:after {
   content: "";
@@ -507,6 +518,7 @@ nav .gnb li a:hover::after {
   width: 18px;
   height: 18px;
   margin-left: 5px;
+  margin-bottom: -2px;
 }
 
 /* section2 */
@@ -577,6 +589,7 @@ nav .gnb li a:hover::after {
 .workExperience .date span {
   display: block;
   margin-bottom: 1.2em;
+  color: #555;
 }
 .workExperience .text p {
   margin-bottom: 1em;
@@ -692,6 +705,8 @@ nav .gnb li a:hover::after {
 }
 .pj_btn {
   font-size: 1.2em;
+  display: flex;
+  gap: 8px;
 }
 .pj_btn a {
   background: linear-gradient(270deg, #5f66ea, #0511f2) no-repeat right bottom / 0 var(--bg-h);
@@ -721,7 +736,6 @@ nav .gnb li a:hover::after {
   position: absolute;
   width: 30px;
   height: 30px;
-  margin-left: 0.5em;
 }
 .pj_btn a:hover .arrow {
   background: url(../img/wt_next.png) no-repeat;
@@ -730,7 +744,6 @@ nav .gnb li a:hover::after {
   position: absolute;
   width: 30px;
   height: 30px;
-  margin-left: 0.5em;
 }
 .pj_desc.pj02 .pj_text {
   width: 50%;
@@ -746,10 +759,9 @@ nav .gnb li a:hover::after {
 .pj04 .figma_btn {
   box-sizing: border-box;
   padding: 0.5em 0.8em 0.5em 0.9em;
-  margin-right: 1.5em;
   width: 10em;
 }
-.pj_desc.pj04 {
+.pj_desc:last-child {
   margin-bottom: 0;
 }
 
@@ -761,20 +773,23 @@ nav .gnb li a:hover::after {
 #section4 h3 {
   padding-top: 5em;
 }
-#section4 .info {
+#section4 .info_wrap {
+  display: flex;
+  justify-content: space-between;
   padding: 2em 0em 5em;
-  display: inline-block;
+}
+#section4 .info {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }
 #section4 p {
   font-size: 1.2em;
   line-height: 1.5em;
   letter-spacing: 0.02em;
-  margin-bottom: 14em;
 }
 .contact_button {
-  top: 70%;
-  margin-bottom: 10em;
   display: flex;
 }
 .contact_button button {
@@ -815,24 +830,22 @@ nav .gnb li a:hover::after {
   width: 18px;
   height: 18px;
   margin-left: 5px;
+  margin-bottom: -2px;
+}
+.kakao {
+  display: flex;
+  flex-direction: column;
 }
 .kakao span {
-  position: absolute;
-  top: 24%;
 }
 .kakao img {
   width: 150px;
-  position: absolute;
-  top: 27%;
-  left: 0;
 }
 .nameCard {
-  position: absolute;
-  top: -10%;
-  left: 38.5em;
+  width: 740px;
 }
 .nameCard img {
-  width: 900px;
+  width: 100%;
 }
 
 /* footer */
@@ -869,13 +882,10 @@ footer .w3c_valid {
     width: 100%;
   }
   nav {
-    padding: 1em 15em;
+    width: 100%;
   }
-  nav h1 {
-    left: 0.6em;
-  }
-  .pulse {
-    left: 0.5em;
+  nav .gnb {
+    justify-content: flex-end;
   }
   nav .gnb li {
     flex: none;
@@ -884,9 +894,13 @@ footer .w3c_valid {
   #main_visual {
     margin-bottom: 10em;
   }
-  #main_visual h2 {
+  #main_visual .main_box {
+    top: 56%;
+    left: 54%;
+  }
+  #main_visual .main_box h2 {
     margin-top: -1em;
-    font-size: 4em;
+    font-size: 4.5em;
   }
   #section1 p::before {
     margin-top: -5em;
@@ -896,19 +910,15 @@ footer .w3c_valid {
   }
   .main_img {
     position: relative;
-    top: 10%;
+    top: 8em;
   }
   .main_img img {
     width: 50%;
   }
-  .main_button {
-    top: 480px;
-    position: absolute;
-  }
   .main_button button,
   .contact_button button {
-    width: 130px;
-    height: 40px;
+    min-width: 12em;
+    width: 100%;
   }
   .main_button button a,
   .contact_button button a {
@@ -923,7 +933,7 @@ footer .w3c_valid {
     background-size: 15px;
   }
   .aboutMe {
-    margin: -6em 1em;
+    margin: 0 1em;
   }
   .mySkills {
     margin: 10em 1em 0 1em;
@@ -965,45 +975,54 @@ footer .w3c_valid {
   #section4 p {
     font-size: 1.1em;
   }
+  #section4 .info {
+    gap: 20px;
+  }
   .nameCard {
-    left: 18em;
-    top: 6.7em;
+    left: 28em;
+    top: 7px;
   }
   .nameCard img {
-    width: 550px;
+    min-width: 550px;
+    width: 100%;
   }
   .cursor {
     display: none;
   }
 }
 /* ================ 모바일 ================ */
-@media screen and (min-width: 375px) and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   #wrap {
     width: 100%;
   }
+  h3:after {
+    width: 100%;
+  }
   nav h1 {
-    margin-left: 2em;
+    margin: 0 auto;
   }
   nav .gnb {
     display: none;
   }
-  .pulse {
-    margin-left: 3.5em;
-    margin-top: -1em;
-  }
   nav.sticky {
     display: none;
   }
-  #main_visual h2 {
-    margin-top: -2em;
-    font-size: 2em;
+  #main_visual .main_box {
+    gap: 2em;
+    top: 32%;
+  }
+  #main_visual .main_box h2 {
+    margin-top: -3em;
+    font-size: 1.8rem;
   }
   #section1 p::before {
-    margin-top: -10em;
+    margin-top: -11em;
+    margin-bottom: 30px;
     width: 20%;
   }
   #main_visual p {
-    font-size: 1em;
+    font-size: 1rem;
+    letter-spacing: -0.03em;
   }
   .main_img {
     position: relative;
@@ -1013,19 +1032,24 @@ footer .w3c_valid {
     width: 50%;
   }
   .main_button {
-    left: 10%;
-    top: 400px;
+    left: -125%;
+    top: 190px;
     position: absolute;
+    gap: 0;
   }
   .main_button button,
   .contact_button button {
-    width: 150px;
+    min-width: 140px;
+    width: 100%;
     height: 40px;
     margin-right: 1em;
   }
+  .main_button button span {
+    font-size: 1.2em;
+  }
   .main_button button a,
   .contact_button button a {
-    font-size: 1.1em;
+    font-size: 0.8em;
   }
   .main_button button a:after,
   .main_button button a:hover::after,
@@ -1036,7 +1060,7 @@ footer .w3c_valid {
     background-size: 15px;
   }
   #section2 {
-    margin-top: 7em;
+    margin-top: 4em;
   }
   .aboutMe {
     margin: -22em 1em 0 1em;
@@ -1058,15 +1082,19 @@ footer .w3c_valid {
     margin: 5em 1em 0 1em;
   }
   .workExperience .date span {
+    line-height: 1.3em;
     margin-bottom: 1.6em;
     font-size: 0.9em;
     letter-spacing: 0.15em;
+    height: 28px;
   }
   .workExperience .text p {
     line-height: 1.3em;
     margin-bottom: 0.8em;
+    margin-left: 8px;
     font-size: 1em;
     letter-spacing: -0.01em;
+    height: 38px;
   }
   #section3,
   #section4 {
@@ -1092,6 +1120,11 @@ footer .w3c_valid {
     left: 0;
     top: 50%;
   }
+  .pj_desc .pj_tit,
+  .pj_desc .pj_info {
+    margin-bottom: 1em;
+  }
+
   .pj_desc img {
     margin-left: 5em;
     width: 640px;
@@ -1113,6 +1146,7 @@ footer .w3c_valid {
   }
   .pj_desc .pj_text p {
     font-size: 1em;
+    margin-bottom: 1em;
   }
   .pj_btn {
     font-size: 1em;
@@ -1120,9 +1154,15 @@ footer .w3c_valid {
   .pj_btn a {
     width: 8em;
   }
+  #section4 .info_wrap {
+    flex-direction: column;
+    gap: 26px;
+  }
+  #section4 .info {
+    gap: 26px;
+  }
   #section4 p {
     font-size: 1em;
-    padding-bottom: 5em;
   }
   .kakao span {
     font-size: 1em;
@@ -1131,15 +1171,12 @@ footer .w3c_valid {
     width: 90px;
   }
   .nameCard {
-    left: 7em;
-    top: 12em;
+    width: 100%;
   }
   .nameCard img {
-    width: 300px;
+    min-width: 330px;
   }
   .contact_button {
-    margin-bottom: 5em;
-    margin-left: 2em;
   }
   footer p {
     width: 100%;
@@ -1151,5 +1188,9 @@ footer .w3c_valid {
   }
   .cursor {
     display: none;
+  }
+  .top_btn {
+    bottom: 2%;
+    right: 7%;
   }
 }
