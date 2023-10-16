@@ -1009,7 +1009,7 @@ footer .w3c_valid {
   }
   #main_visual .main_box {
     gap: 2em;
-    top: 32%;
+    top: 34%;
   }
   #main_visual .main_box h2 {
     margin-top: -3em;
@@ -1026,14 +1026,14 @@ footer .w3c_valid {
   }
   .main_img {
     position: relative;
-    top: 10%;
+    top: 12%;
   }
   .main_img img {
     width: 50%;
   }
   .main_button {
     left: -125%;
-    top: 190px;
+    top: 165px;
     position: absolute;
     gap: 0;
   }
@@ -1060,7 +1060,7 @@ footer .w3c_valid {
     background-size: 15px;
   }
   #section2 {
-    margin-top: 4em;
+    margin-top: 7em;
   }
   .aboutMe {
     margin: -22em 1em 0 1em;
